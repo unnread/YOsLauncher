@@ -23,8 +23,8 @@ Interface simple avec 3 boutons :
 ### Cloner le dépôt
 
 ```bash
-git clone https://github.com/VOTRE_PSEUDO/yoslaunch.git
-cd yoslaunch
+git clone https://github.com/unnread/YOsLauncher.git
+cd YOsLauncher
 ```
 
 ### Installer les dépendances
