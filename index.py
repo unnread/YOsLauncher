@@ -18,7 +18,7 @@ ctk.set_default_color_theme("green")
 
 app = ctk.CTk()
 
-app.title("Mon App")
+app.title("YLauncher")
 app.geometry("420x520")
 app.resizable(False, False)
 
