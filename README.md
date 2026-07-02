@@ -65,7 +65,7 @@ subprocess.Popen("lxterminal")
 
 Version 0
 
-> "La première et la dernière."
+> "La première et la dernière. (quoi que peut etre une mise a jour summer)"
 
 ## Auteur
 
