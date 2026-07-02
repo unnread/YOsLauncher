@@ -1,97 +1,68 @@
 import customtkinter as ctk
 import subprocess
 
-# en = You can change if you dont have vscode or firefox or lxterminal ..lalal
-# fr = Tu peux changer si tu as pas vscode ou firefox ou lxterminal ... etc
-
-def add():
-    subprocess.Popen("firefox")
-
-def add1():
-    subprocess.Popen("code")
-
-def add2():
-    subprocess.Popen("lxterminal")
-
+# 🎨 Theme summer
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("green")
 
 app = ctk.CTk()
-
-app.title("YLauncher")
+app.title("YLauncher ☀️ Summer Edition")
 app.geometry("420x520")
 app.resizable(False, False)
 
+# 🌿 Open apps
+def run(app_name):
+    subprocess.Popen(app_name)
+
+# 🧊 Main frame
 main_frame = ctk.CTkFrame(
     app,
-    fg_color="#111318",
+    fg_color="#0f1410",
     corner_radius=24,
     border_width=1,
-    border_color="#1f5c1f",
+    border_color="#2ecc71"
 )
 main_frame.pack(expand=True, fill="both", padx=20, pady=20)
 
-label = ctk.CTkLabel(
+# 🌞 Title
+ctk.CTkLabel(
     main_frame,
-    text="Welcome",
-    font=("Helvetica", 26, "bold"),
-    text_color="#a8ffaf",
-)
-label.pack(pady=(24, 8))
+    text="☀️ YLauncher",
+    font=("Helvetica", 28, "bold"),
+    text_color="#a8ffaf"
+).pack(pady=(25, 5))
 
-subtitle = ctk.CTkLabel(
+ctk.CTkLabel(
     main_frame,
-    text="Choisis une action ci-dessous",
-    font=("Helvetica", 14),
-    text_color="#c6f3c6",
-)
-subtitle.pack(pady=(0, 24))
+    text="Summer Edition • apps rapides",
+    font=("Helvetica", 13),
+    text_color="#c6f3c6"
+).pack(pady=(0, 20))
 
-btn = ctk.CTkButton(
-    main_frame,
-    text="Ouvrir Firefox",
-    command=add,
-    fg_color="#285228",
-    hover_color="#2f6b2f",
-    text_color="white",
-    corner_radius=18,
-    border_width=0,
-    height=48,
-)
-btn.pack(fill="x", padx=24, pady=(0, 12))
+# 🔘 Button style function
+def make_btn(text, cmd):
+    return ctk.CTkButton(
+        main_frame,
+        text=text,
+        command=cmd,
+        fg_color="#1f3d1f",
+        hover_color="#2ecc71",
+        text_color="white",
+        corner_radius=16,
+        height=45
+    )
 
-btn1 = ctk.CTkButton(
-    main_frame,
-    text="Ouvrir VS Code",
-    command=add1,
-    fg_color="#285228",
-    hover_color="#2f6b2f",
-    text_color="white",
-    corner_radius=18,
-    border_width=0,
-    height=48,
-)
-btn1.pack(fill="x", padx=24, pady=(0, 12))
+# 🚀 Apps
+make_btn(" Firefox", lambda: run("firefox")).pack(fill="x", padx=25, pady=6)
+make_btn(" VS Code", lambda: run("code")).pack(fill="x", padx=25, pady=6)
+make_btn(" Terminal", lambda: run("lxterminal")).pack(fill="x", padx=25, pady=6)
 
-btn2 = ctk.CTkButton(
+# 🌴 Footer
+ctk.CTkLabel(
     main_frame,
-    text="Ouvrir Terminal",
-    command=add2,
-    fg_color="#285228",
-    hover_color="#2f6b2f",
-    text_color="white",
-    corner_radius=18,
-    border_width=0,
-    height=48,
-)
-btn2.pack(fill="x", padx=24, pady=(0, 24))
-
-footer = ctk.CTkLabel(
-    main_frame,
-    text="Version 0 (Sa sera la première et La DERNIÈRE)",
+    text="v0.1 Summer Build ☀️",
     font=("Helvetica", 11),
-   text_color="#6b8f6b",
-)
-footer.pack(side="bottom", pady=12)
+    text_color="#6b8f6b"
+).pack(side="bottom", pady=15)
 
 app.mainloop()
