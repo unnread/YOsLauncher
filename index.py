@@ -58,7 +58,7 @@ make_btn(" Terminal", lambda: run("lxterminal")).pack(fill="x", padx=25, pady=6)
 #  Footer
 ctk.CTkLabel(
     main_frame,
-    text="v0.1 Summer Build ☀️",
+    text="v0.1 Summer Build ",
     font=("Helvetica", 11),
     text_color="#8fd3ff"
 ).pack(side="bottom", pady=15)
