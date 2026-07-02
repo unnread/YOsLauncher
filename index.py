@@ -4,7 +4,7 @@ import subprocess
 ctk.set_appearance_mode("dark")
 
 app = ctk.CTk()
-app.title("YLauncher ☀️ Summer")
+app.title("YLauncher Summer")
 app.geometry("420x520")
 app.resizable(False, False)
 
@@ -24,14 +24,14 @@ main_frame.pack(expand=True, fill="both", padx=20, pady=20)
 # ☀️ Title
 ctk.CTkLabel(
     main_frame,
-    text="☀️ Summer Launcher",
+    text=" Summer Launcher",
     font=("Helvetica", 28, "bold"),
     text_color="#ffd36e"
 ).pack(pady=(25, 5))
 
 ctk.CTkLabel(
     main_frame,
-    text="Ocean • Sun • Apps",
+    text="Mise a Jour ...   Summer !",
     font=("Helvetica", 13),
     text_color="#8fd3ff"
 ).pack(pady=(0, 20))
@@ -42,8 +42,8 @@ def make_btn(text, cmd):
         main_frame,
         text=text,
         command=cmd,
-        fg_color="#24545f",     # bleu océan
-        hover_color="#ffcc70",  # soleil hover
+        fg_color="#24545f",  
+        hover_color="#ffcc70",
         text_color="white",
         corner_radius=16,
         height=45,
