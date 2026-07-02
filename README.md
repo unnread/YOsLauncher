@@ -36,7 +36,7 @@ pip install customtkinter
 ## Lancement
 
 ```bash
-python main.py
+python index.py
 ```
 
 ## Configuration
